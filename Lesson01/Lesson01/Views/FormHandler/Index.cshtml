@@ -1,0 +1,39 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    @if (String.IsNullOrEmpty(ViewBag.Firstname) || String.IsNullOrEmpty(ViewBag.Lastname))
+    {
+        <h2>Register</h2>
+
+        <form asp-controller="FormHandler" asp-action="Index" method="post">
+            <p>
+                <label for="Firstname">Firstname</label><br />
+                <input type="text" name="Firstname" />
+            </p>
+            <p>
+                <label for="Lastname">Lastname</label><br />
+                <input type="text" name="Lastname" />
+            </p>
+            <input type="submit" value="Register" />
+        </form>
+
+    }
+    else
+    {
+        <p>Your name: @ViewBag.Firstname @ViewBag.Lastname </p>
+    }
+
+</body>
+</html>

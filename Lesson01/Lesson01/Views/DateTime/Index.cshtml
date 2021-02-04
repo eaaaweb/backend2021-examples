@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>DataTime examples</h1>
+    <ul> 
+        <li>@ViewBag.DT1.ToShortDateString() <span style="color:gray">// ToShortDateString()</span> </li>
+        <li>@ViewBag.DT1.ToLongTimeString() <span style="color:gray">// ToLongTimeString()</span></li>
+        <li>@ViewBag.DT1.ToLongDateString() <span style="color:gray">// ToLongDateString()</span></li>
+        <li>@ViewBag.DT1.ToString() <span style="color:gray">// ToString()</span></li>
+    </ul>
+
+    <ul>
+        <li>@ViewBag.DT2.ToString() <span style="color:gray">// New date with time part ToString()</span></li>
+        <li>@DateTime.Today <span style="color:gray">// DateTime.Today</span></li>
+        <li>@DateTime.Now <span style="color:gray">// DateTime.Now</span></li>
+
+
+
+    </ul>
+</body>
+</html>

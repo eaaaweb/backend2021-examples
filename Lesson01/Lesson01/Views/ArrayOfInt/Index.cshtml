@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @{
+        int[] nums = { 1, 7, 9, 20 };
+
+        // add numbers in array
+        int sum = 0;
+        for (int i = 0; i < nums.Length; i++) {
+            sum = sum + nums[i];
+        }
+    }
+    Sum: @sum
+
+</body>
+</html>

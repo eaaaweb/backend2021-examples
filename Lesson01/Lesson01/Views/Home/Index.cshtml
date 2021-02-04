@@ -1,0 +1,32 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@{
+    Layout = null;
+    ViewData["Titel"] = "Backend programming - lesson 01 examples";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Titel"]</title>
+</head>
+<body>
+
+    <h1>@ViewData["Titel"]</h1>
+
+    <div><a href="http://eaaabackend.dk">Home</a></div>
+
+    <ul>
+        <li><a asp-controller="Hello">Hello Controller</a></li>
+        <li><a asp-controller="DateTime">DateTime Controller</a></li>
+        <li><a asp-controller="Fruit">Fruit Controller</a></li>
+        <li><a asp-controller="Movie">Movie Controller</a></li>
+        <li><a asp-controller="ArrayOfInt">Array of int</a></li>
+        <li><a asp-controller="ArrayOfString">Array of string</a></li>
+        <li><a asp-controller="FormHandler">FormHandler Controller</a></li>
+    </ul>
+
+</body>
+</html>
+
