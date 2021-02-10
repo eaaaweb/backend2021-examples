@@ -1,0 +1,39 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+    ViewData["Title"] = "Simple Datatype Objects";
+
+    ViewContext.ClientValidationEnabled = true;
+    bool isJSValidation = ViewContext.ClientValidationEnabled;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        code {
+            color: firebrick;
+        }
+    </style>
+</head>
+<body>
+    <a asp-controller="Home">Home</a>
+
+    <h1>@ViewData["Title"]</h1>
+
+    <p>
+        The value of the <code>integer</code> object: @ViewBag.Integer;
+    </p>
+    <p>
+        The <code>ToString()</code> method of the <code>integer</code> object converts it to a <code>string</code>: @ViewBag.String
+    </p>
+    <p>
+        The <code>Length</code> property of the <code>string</code> object returns it's <code>length</code> as an <code>integer</code>: @ViewBag.StringLength
+    </p>
+
+</body>
+</html>

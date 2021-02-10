@@ -1,0 +1,9 @@
+diff a/Lesson02/Lesson02/Views/SimpleDatatypeObjects/Index.cshtml b/Lesson02/Lesson02/Views/SimpleDatatypeObjects/Index.cshtml	(rejected hunks)
+@@ -26,7 +26,6 @@
+     <h1>@ViewData["Title"]</h1>
+ 
+     <p>
+-        The value of the <code>integer</code> object: @ViewBag.Integer;
+         The value of the <code>integer</code> object: @ViewBag.Integer
+     </p>
+     <p>

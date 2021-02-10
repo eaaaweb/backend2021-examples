@@ -1,0 +1,40 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dice</title>
+    <style>
+        .result {
+            font-size: 1.5em;
+            border: solid 1px red;
+            padding: 4px;
+            width: 1em;
+            display: inline-block;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+
+    <a asp-controller="Home">Home</a>
+    <h1>Dice roller</h1>
+
+
+    <div>
+        <form asp-controller="dice" method="post">
+            <button type="submit">Roll the Dice</button>
+        </form>
+
+        @if (ViewBag.Face != null)
+        {
+            <p>You got: <span class="result"> @ViewBag.Face</span></p>
+        }
+
+    </div>
+</body>
+</html>
