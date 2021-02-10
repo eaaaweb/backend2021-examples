@@ -17,9 +17,9 @@ namespace Lesson01.Controllers
         
         // POST: FormHandler
         [HttpPost]
-        public IActionResult Index(IFormCollection formCollection) {
-            ViewBag.Firstname = formCollection["Firstname"];
-            ViewBag.Lastname = formCollection["Lastname"];
+        public IActionResult Index(IFormCollection fc) {
+            ViewBag.Firstname = fc["Firstname"];
+            ViewBag.Lastname = fc["Lastname"];
             return View();
         }
     }
