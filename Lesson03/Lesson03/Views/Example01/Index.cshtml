@@ -1,0 +1,24 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using lesson03_examples.Models;
+@using System.Collections.Generic;
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Index";
+}
+
+<h2>Example 01</h2>
+<div style="padding-bottom:2em">
+    <a asp-controller="Home">Home</a>
+</div>
+<div>
+    @{
+        List<Person> persons = ViewBag.persons;
+        <ul>
+            @foreach (Person p in persons)
+            {
+                <li>@p.GetAsString()</li>
+            }
+        </ul>
+
+    }
+</div>
