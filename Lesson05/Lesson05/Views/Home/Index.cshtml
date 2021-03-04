@@ -1,0 +1,40 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Lesson05.Models.Person
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Checkout</title>
+
+    @*<link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .container {
+            margin: 2em;
+        }
+
+        .form-group {
+            width: 400px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lesson 5 examples</h1>
+
+        <ul>
+            <li><a asp-action="index" asp-controller="Person">Person</a></li>
+            <li><a asp-action="index" asp-controller="Login">Login</a></li>
+        </ul>
+        
+
+
+    </div>
+</body>
+</html>
