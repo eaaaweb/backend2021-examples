@@ -19,9 +19,7 @@ namespace Lesson02.Controllers
         public IActionResult Index(IFormCollection fc)
         {
             Random rnd = new Random(); 
-
             int i = rnd.Next(1, 7);
-
             ViewBag.Face = i; 
             return View(); 
         }
