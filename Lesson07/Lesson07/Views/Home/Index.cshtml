@@ -1,0 +1,45 @@
+﻿@using  Lesson07.Components
+@model string[]
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@addTagHelper *, Lesson07
+@{
+    ViewBag.Title = "Lesson 7, examples";
+
+}
+
+@section LeftPanel {
+    <div>
+        @foreach (string titel in new[] { "Index", "List", "Edit" })
+        {
+            <a asp-action="@titel" style="margin: 5px">@titel</a>
+        }
+    </div>
+}
+
+
+<div>
+    This is a list of fruit names:
+    @foreach (string name in Model)
+    {
+        <span><b>@name</b></span>
+    }
+</div>
+
+<partial name="_PartialPage02" for="@Model" />
+
+<h2>Movie List</h2>
+<vc:movie-list items="5"></vc:movie-list>
+
+@*@await Component.InvokeAsync("MovieList", 5)*@
+
+
+
+@section RightPanel {
+    <div>
+        This is the Right Panel Content
+
+        <a asp-action="Index" asp-controller="Home" asp-route-area="admin">Admin area</a>
+
+    </div>
+}

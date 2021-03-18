@@ -1,0 +1,9 @@
+﻿@model IEnumerable<string>
+<div style="color:darkgreen;font-size:24px">
+    Delicious fruit (from partial view):
+    <ul class="view" >
+        @foreach (string name in Model) {
+            <li style="margin-left:30px;">@name</li>
+        }
+    </ul>
+</div>
