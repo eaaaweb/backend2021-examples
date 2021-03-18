@@ -1,0 +1,32 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewBag.Title = "Outgoing URL";
+    Layout = null;
+}
+
+<h2>Outgoing URL</h2>
+<div>
+    <ul>
+
+        @*Named action *@
+        <li><a asp-action="Index">Same controller and a named action</a></li>
+
+        @*Action + paramters*@
+        <li><a asp-action="Index" asp-route-page="2" , asp-route-sortorder="Author">Same controller and action with URL parameters</a></li>
+
+        @*Action + controller*@
+        <li><a asp-action="AnotherAction" asp-controller="AnotherController">Another controller and action</a></li>
+
+
+        <li><a asp-controller="books" asp-route-category="Fiction", asp-route-title="Crime-and-Punishment">Same controller and action with URL parameters</a></li>
+
+        <li><a asp-controller="Home" asp-action="Index"
+           asp-protocol="http"
+           asp-host="eaaabackend.dk">
+            This is an outgoing URL
+        </a></li>
+
+
+    </ul>
+</div>
+
