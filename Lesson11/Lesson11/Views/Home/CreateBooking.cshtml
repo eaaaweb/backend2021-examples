@@ -1,0 +1,35 @@
+﻿@using lesson11.Models
+@model Appointment
+
+@{
+    ViewData["Title"] = "Make a booking";
+}
+@section scripts {
+
+    @*<script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>*@
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js" integrity="sha512-EanukVTZc4W9tUCLnDl069Izidg49PcNRKO1upLzKt9ajq66i+bXOtlzXcIbRhb6vVEGF6BCc8wQi5T1ztCpTQ==" crossorigin="anonymous"></script>
+
+}
+
+@{ Layout = "_Layout"; }
+<div class="bg-primary m-1 p-1 text-white"><h2>Book an Appointment</h2></div>
+@*asp-action="CreateBooking"*@
+<form asp-action="CreateBooking" method="post">
+    <div asp-validation-summary="None"></div>
+    <div class="form-group">
+        <label asp-for="FullName">Your name:</label>
+        <input asp-for="FullName" class="form-control" />
+        <div><span asp-validation-for="FullName"></span></div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Date">Appointment Date:</label>
+        <input asp-for="Date" asp-format="{0:d}" class="form-control" />
+        <div><span asp-validation-for="Date"></span></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Make Booking</button>
+</form>

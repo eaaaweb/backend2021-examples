@@ -1,0 +1,8 @@
+﻿.validation-summary-errors, .field-validation-error {
+    color: #f00;
+}
+
+.input-validation-error {
+    border: 2px solid #f00;
+    background-color: #fee;
+}
