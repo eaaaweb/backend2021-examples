@@ -1,10 +1,12 @@
+using System;
+using Lesson10.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Lesson10.Data;
 
 namespace Lesson10
 {
@@ -20,9 +22,9 @@ namespace Lesson10
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
-            services.AddDbContext<Lesson10Context>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("Lesson10Context")));
+            services.AddDbContext<BookContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("BookContext")));
+            services.AddScoped<IBookRepository, EFBookRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -45,7 +47,7 @@ namespace Lesson10
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Book}/{action=Index}/{id?}");
             });
         }
     }

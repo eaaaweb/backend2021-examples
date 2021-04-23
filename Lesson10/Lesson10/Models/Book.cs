@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Lesson10.Models
 {
@@ -11,6 +14,5 @@ namespace Lesson10.Models
 
         public int AuthorId { get; set; }
         public Author Author { get; set; }
-
     }
 }
