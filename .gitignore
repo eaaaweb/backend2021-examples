@@ -337,7 +337,7 @@ _others/
 *.csproj
 *.csproj.user
 *.sln
-Identity/
+_Identity/
 _Lesson10/
 Lesson01_FutureValue/
 *.zip
